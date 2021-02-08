@@ -1,0 +1,16 @@
+version: '3'
+services:
+  h5-report:
+    image: node:10.15
+    container_name: h5-report
+    ports: 
+      # 浏览器访问端口
+      - "8080:8080"
+      # 预留端口
+      - "8081"
+      - "8082"
+    tty: true
+    stdin_open: true
+    working_dir: /app
+    volumes:
+    - "./:/app"
