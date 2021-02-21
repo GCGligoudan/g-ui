@@ -10,6 +10,14 @@ const router = new Router({
   routes: [
     {
       path: '/',
+      name: 'index',
+      meta: {
+        title: 'g-ui移动组件库',
+      },
+      component: () => import('@/views/index.vue'),
+    },
+    {
+      path: '/index',
       name: 'auth',
       meta: {
         title: '用户登录',
@@ -30,6 +38,26 @@ const router = new Router({
       path: '/about',
       name: 'about',
       component: () => import(/* webpackChunkName: 'about' */ './views/About.vue'),
+    },
+    {
+      path: '/button',
+      name: 'button',
+      component: () => import(/* webpackChunkName: 'button' */ './views/demo/button.vue'),
+    },
+    {
+      path: '/checkbox',
+      name: 'checkbox',
+      component: () => import(/* webpackChunkName: 'checkbox' */ './views/demo/checkbox.vue'),
+    },
+    {
+      path: '/loading',
+      name: 'loading',
+      component: () => import(/* webpackChunkName: 'loading' */ './views/demo/loading.vue'),
+    },
+    {
+      path: '/messageBox',
+      name: 'messageBox',
+      component: () => import(/* webpackChunkName: 'messageBox' */ './views/demo/messageBox.vue'),
     },
   ],
 });

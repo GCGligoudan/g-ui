@@ -29,6 +29,10 @@ export default class Checkbox extends Vue {
 </script>
 <style lang="less" scoped>
 .g-checkboxlist{
+  display: block;
+  .g-checkbox{
+    margin: 0.2em 0;
+  }
   // easy inline labels
   input[type=checkbox], label {
     // dont highlight text when double clicking

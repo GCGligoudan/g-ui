@@ -4,6 +4,16 @@ function resolve(dir) {
   return path.join(__dirname, './', dir);
 }
 
+function addStyleResource (rule) {
+  rule.use('style-resource')
+    .loader('style-resources-loader')
+    .options({
+      patterns: [
+        path.resolve(__dirname, './src/variable.less'),
+      ],
+    })
+}
+
 const isProduction = process.env.NODE_ENV === 'production';
 const externals = {
   'vue': 'Vue',
@@ -49,6 +59,8 @@ module.exports = {
     // disableHostCheck: true,
   },
   chainWebpack: config => {
+    const types = ['vue-modules', 'vue', 'normal-modules', 'normal']
+    types.forEach(type => addStyleResource(config.module.rule('less').oneOf(type)))
     // config.plugins.delete('prefetch');
     // config.plugins.delete('preload');
     if (isProduction) {

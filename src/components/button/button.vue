@@ -70,7 +70,7 @@ export default class Button extends Vue {
     opacity: 0.6;
   }
   .g-button-small{
-    padding: 6px 9px;
+    padding: 3px 6px;
   }
   .g-button-large{
     padding: 10px 15px;

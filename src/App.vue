@@ -1,30 +1,33 @@
 <template>
   <div id="app">
     <transition mode="out-in" name="page-fade">
-      <!-- <router-view /> -->
-      <!-- <keep-alive :exclude="['PersonalQuality']">
-        <router-view />
-      </keep-alive> -->
       <keep-alive :include="aliveComponetStack">
-        <router-view :key="$route.path"/>
+        <router-view :key="$route.path" />
       </keep-alive>
     </transition>
   </div>
 </template>
 <script lang="ts">
-import { Component, Vue, Prop, Watch } from 'vue-property-decorator';
+import { Component, Vue, Prop, Watch } from "vue-property-decorator";
 @Component({})
 export default class App extends Vue {
   private aliveComponetStack: string[] = [];
-  @Watch('$route')
+  @Watch("$route")
   private onRouterChange(to: any, from: any) {
-    const toComponentName = to.matched[0] && to.matched[0].components.default.name;
-    const fromComponentName = from.matched[0] && from.matched[0].components.default.name;
-    if (this.aliveComponetStack.indexOf(toComponentName) === -1) { // 当前栈中没有to的component，表示前进
+    const toComponentName =
+      to.matched[0] && to.matched[0].components.default.name;
+    const fromComponentName =
+      from.matched[0] && from.matched[0].components.default.name;
+    if (this.aliveComponetStack.indexOf(toComponentName) === -1) {
+      // 当前栈中没有to的component，表示前进
       this.aliveComponetStack.push(toComponentName);
-    } else { // 当前栈中有to的component，表示是后退
+    } else {
+      // 当前栈中有to的component，表示是后退
       if (this.aliveComponetStack.indexOf(fromComponentName) !== -1) {
-        this.aliveComponetStack.splice(this.aliveComponetStack.indexOf(fromComponentName), 1);
+        this.aliveComponetStack.splice(
+          this.aliveComponetStack.indexOf(fromComponentName),
+          1,
+        );
       }
     }
   }
@@ -32,12 +35,12 @@ export default class App extends Vue {
 </script>
 <style lang="less">
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 100%;
   height: 100%;
-  >div{
+  > div {
     width: 100%;
     box-sizing: border-box;
     overflow: hidden;
@@ -55,14 +58,24 @@ export default class App extends Vue {
 }
 // 页面进入时动画
 .page-fade-enter-active {
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 // 页面离开时时动画
 .page-fade-leave-active {
-  transition: all .2s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  transition: all 0.2s cubic-bezier(1, 0.5, 0.8, 1);
 }
-.page-fade-enter, .page-fade-leave-to {
+.page-fade-enter,
+.page-fade-leave-to {
   // transform: translateZ(10px);
   opacity: 0;
+}
+.comp-page{
+  padding: 30px 15px;
+}
+.comp-des{
+  margin: 10px 0;
+  padding: 10px 15px;
+  background-color: @des-bgc;
+  border-radius: 8px;
 }
 </style>

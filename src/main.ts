@@ -16,9 +16,9 @@ Vue.use(Message);
 Vue.use(validator);
 
 Vue.config.productionTip = false;
-// Vue.config.errorHandler = (err, vm, info) => {
-//   console.log(`Error: ${err.toString()}\nInfo: ${info}`);
-// };
+Vue.config.errorHandler = (err, vm, info) => {
+  console.log(`Error: ${err.toString()}\nInfo: ${info}`);
+};
 
 Vue.use(VueI18n);
 // 通过选项创建 VueI18n 实例
