@@ -72,6 +72,12 @@ export default class App extends Vue {
 .comp-page{
   padding: 30px 15px;
 }
+.comp-code{
+  margin: 15px 0;
+}
+.comp-title{
+  padding-top: 10px;
+}
 .comp-des{
   margin: 10px 0;
   padding: 10px 15px;

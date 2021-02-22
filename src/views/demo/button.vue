@@ -2,7 +2,12 @@
   <div class="button comp-page">
     <div>
       <p>基本使用方式：</p>
-      <div class="comp-des" v-text="`<Gbutton>default</Gbutton>`"></div>
+      <div class="comp-code">
+        <!-- Code Block -->
+        <highlight-code lang="html">
+          &lt;Gbutton&gt;button&lt;/Gbutton&gt;
+        </highlight-code>
+      </div>
     </div>
     <div>
       <h3>颜色：</h3>

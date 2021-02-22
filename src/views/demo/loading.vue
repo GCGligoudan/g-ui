@@ -2,14 +2,24 @@
   <div class="loading comp-page">
     <div>
       <p>基本使用方式：</p>
-      <div class="comp-des" v-text="`this.$GLoading.open('加载中')`"></div>
+      <div class="comp-code">
+        <!-- Code Block -->
+        <highlight-code lang="javascript">
+          this.$GLoading.open('加载中')
+        </highlight-code>
+      </div>
       <div>
         <Gbutton @click="loading()">loading</Gbutton>
       </div>
     </div>
     <div>
-      <p>关闭：</p>
-      <div class="comp-des" v-text="`this.$GLoading.close()`"></div>
+      <h3 class="comp-title">关闭：</h3>
+      <div class="comp-code">
+        <!-- Code Block -->
+        <highlight-code lang="javascript">
+          this.$GLoading.close()
+        </highlight-code>
+      </div>
       <div>
         <Gbutton @click="closeLoading()">关闭loading</Gbutton>
       </div>

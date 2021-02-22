@@ -1,37 +1,51 @@
 <template>
-  <div class="button comp-page">
+  <div class="checkbox comp-page">
     <div>
       <p>基本使用方式：</p>
-      <div class="comp-des" v-text="`
-        <checkbox v-model='value' :options='selectOptions'></checkbox>
-        <script>
-          ...
-          data(){
-            return {
-              value: ['A', 'B']
-              selectOptions: [
-                {
-                  label: '选项A',
-                  value: 'A',
-                },
-                {
-                  label: '选项B',
-                  value: 'B',
-                },
-                {
-                  label: '选项C',
-                  value: 'C',
-                },
-                {
-                  label: '选项D',
-                  value: 'D',
-                },
-              ]
+      <div class="comp-code">
+        <highlight-code lang="html">
+          &lt;template&gt;
+            &lt;checkbox
+              v-model='value'
+              :options='selectOptions'
+            &gt;
+            &lt;/checkbox&gt;
+          &lt;/template&gt;
+        </highlight-code>
+      </div>
+      <div class="comp-code">
+        <highlight-code lang="javascript">
+          &lt;script&gt;
+            export default {
+              data(){
+                return {
+                  value: ['A', 'B']
+                  selectOptions: [
+                    {
+                      label: '选项A',
+                      value: 'A',
+                    },
+                    {
+                      label: '选项B',
+                      value: 'B',
+                    },
+                    {
+                      label: '选项C',
+                      value: 'C',
+                    },
+                    {
+                      label: '选项D',
+                      value: 'D',
+                    },
+                  ]
+                }
+              },
             }
-          },
-        </script>
-      `"></div>
+          &lt;/script&gt;
+        </highlight-code>
+      </div>
       <checkbox v-model="value" :options="selectOptions"></checkbox>
+      <div class="comp-des">checkbox被选中的值：{{value.join(',')}}</div>
     </div>
   </div>
 </template>
@@ -44,7 +58,7 @@ import checkbox from "@/components/checkbox/checkbox.vue";
     checkbox,
   },
 })
-export default class Author extends Vue {
+export default class Checkbox extends Vue {
 private value: Array<string|number> = ['A', 'B'];
   private selectOptions = [
     {
@@ -67,7 +81,5 @@ private value: Array<string|number> = ['A', 'B'];
 }
 </script>
 <style lang='less' scoped >
-button{
-  margin: 5px;
-}
+
 </style>

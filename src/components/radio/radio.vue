@@ -1,15 +1,18 @@
 <template>
-  <div class="radio">
-    <label class="ui-radio ignore" :class="{'checked': model == value, 'disabled': disabled}">
-      <span class="ignore"></span>
-      <input 
-        type="radio" 
-        ref="radio" 
-        :value="value" 
-        @click="updateVal" 
-        :disabled="disabled"
-      >
-    </label>
+  <div>
+    <div class="radio">
+      <label class="ui-radio ignore" :class="{'checked': model == value, 'disabled': disabled}">
+        <span class="ignore"></span>
+        <input 
+          type="radio" 
+          ref="radio" 
+          :value="value" 
+          @click="updateVal" 
+          :disabled="disabled"
+        >
+      </label>
+    </div>
+  <span><slot></slot></span>
   </div>
 </template>
 <script lang="ts">
@@ -35,7 +38,8 @@ export default class Radio extends Vue {
 <style lang="less" scoped>
 .radio{
   display: inline-block;
-  margin-right: 10px;
+  margin: 3px 0;
+  margin-right: 12px;
   label.ignore{
     width: 16px;
     height: 16px;

@@ -10,10 +10,13 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "@types/highlight.js": "^10.1.0",
     "axios": "^0.18.0",
     "core-js": "^2.6.5",
+    "highlight.js": "^10.6.0",
     "vue": "^2.6.10",
     "vue-class-component": "^7.0.2",
+    "vue-highlight.js": "^4.0.0-beta",
     "vue-i18n": "^8.11.2",
     "vue-property-decorator": "^8.1.0",
     "vue-router": "^3.0.3"
@@ -38,7 +41,7 @@
     "style-resources-loader": "^1.4.1",
     "svg-sprite-loader": "^4.1.6",
     "ts-jest": "^23.0.0",
-    "typescript": "^3.4.3",
+    "typescript": "^3.5.1",
     "vue-template-compiler": "^2.5.21"
   }
 }

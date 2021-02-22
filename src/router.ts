@@ -50,14 +50,29 @@ const router = new Router({
       component: () => import(/* webpackChunkName: 'checkbox' */ './views/demo/checkbox.vue'),
     },
     {
+      path: '/radio',
+      name: 'radio',
+      component: () => import(/* webpackChunkName: 'radio' */ './views/demo/radio.vue'),
+    },
+    {
       path: '/loading',
       name: 'loading',
       component: () => import(/* webpackChunkName: 'loading' */ './views/demo/loading.vue'),
     },
     {
+      path: '/message',
+      name: 'message',
+      component: () => import(/* webpackChunkName: 'message' */ './views/demo/message.vue'),
+    },
+    {
       path: '/messageBox',
       name: 'messageBox',
       component: () => import(/* webpackChunkName: 'messageBox' */ './views/demo/messageBox.vue'),
+    },
+    {
+      path: '/validator',
+      name: 'validator',
+      component: () => import(/* webpackChunkName: 'validator' */ './views/demo/validator.vue'),
     },
   ],
 });
