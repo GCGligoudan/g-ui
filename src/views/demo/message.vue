@@ -38,7 +38,7 @@ export default class Loading extends Vue {
   }
   private showErrorMessage() {
     this.$GMsg.show({
-      message: 'ERROR',
+      message: 'error',
       type: 'error',
     });
   }

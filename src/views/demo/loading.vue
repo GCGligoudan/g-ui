@@ -20,9 +20,9 @@
           this.$GLoading.close()
         </highlight-code>
       </div>
-      <div>
+      <!-- <div>
         <Gbutton @click="closeLoading()">关闭loading</Gbutton>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>

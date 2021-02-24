@@ -13,7 +13,7 @@
           &lt;Gbutton @click="validate()"&gt;提交&lt;/Gbutton&gt;
         </highlight-code>
       </div>
-      <h3 class="comp-title">校验规则</h3>
+      <h3 class="comp-title">校验规则：</h3>
       <div class="comp-code">
         <highlight-code lang="javascript">
           const required = (message: string) => ({
@@ -27,7 +27,7 @@
           });
         </highlight-code>
       </div>
-      <h3 class="comp-title">校验方法</h3>
+      <h3 class="comp-title">校验方法：</h3>
       <div class="comp-code">
         <highlight-code lang="javascript">
           &lt;script&gt;

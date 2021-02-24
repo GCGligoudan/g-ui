@@ -15,6 +15,8 @@ interface IOptions {
   title: string;
   content: string;
   showCancelButton: boolean;
+  cancelButtonText?: string;
+  confirmButtonText?: string;
 }
 
 const cancelBtnText = '取消';
@@ -31,8 +33,8 @@ const MessageBox = {
 
     instance.title = options.title;
     instance.content = options.content;
-    instance.cancelButtonText = cancelBtnText;
-    instance.confirmButtonText = confirmBtnText;
+    instance.cancelButtonText = options.cancelButtonText || cancelBtnText;
+    instance.confirmButtonText = options.confirmButtonText || confirmBtnText;
     instance.showCancelButton = options.showCancelButton;
 
     document.body.appendChild(instance.$el);

@@ -8,7 +8,7 @@ interface IMessage extends Vue {
 }
 interface IOptions {
   message: string;
-  type: string;
+  type?: string;
 }
 const MessageConstructor = Vue.extend(message);
 let instance: IMessage;

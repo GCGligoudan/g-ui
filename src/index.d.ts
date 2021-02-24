@@ -4,10 +4,12 @@ interface IMsgBoxOptions {
   title: string;
   content: string;
   showCancelButton: boolean;
+  cancelButtonText?: string;
+  confirmButtonText?: string;
 }
 interface IMsgOptions {
   message: string;
-  type: string;
+  type?: string;
 }
 
 export interface ILoading {

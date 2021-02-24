@@ -1,6 +1,5 @@
 <template>
   <div class="about">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
     <h1>This is an about page</h1>
     <Gbutton>默认按钮</Gbutton>
     <br>
@@ -17,12 +16,10 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import Gbutton from '../components/button/button.vue';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
 
 @Component({
   components: {
     Gbutton,
-    HelloWorld,
   },
 })
 

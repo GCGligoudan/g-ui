@@ -74,6 +74,11 @@ const router = new Router({
       name: 'validator',
       component: () => import(/* webpackChunkName: 'validator' */ './views/demo/validator.vue'),
     },
+    {
+      path: '/svg',
+      name: 'svg',
+      component: () => import(/* webpackChunkName: 'svg' */ './views/demo/svg.vue'),
+    },
   ],
 });
 

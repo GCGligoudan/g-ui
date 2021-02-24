@@ -15,6 +15,11 @@
         </router-link>
       </li>
       <li>
+        <router-link to="/radio">
+          radio <svg-icon class="rightArrow" iconClass="rightArrow"></svg-icon>
+        </router-link>
+      </li>
+      <li>
         <router-link to="/loading">
           loading
           <svg-icon class="rightArrow" iconClass="rightArrow"></svg-icon>
@@ -33,19 +38,14 @@
         </router-link>
       </li>
       <li>
-        <router-link to="/radio">
-          radio <svg-icon class="rightArrow" iconClass="rightArrow"></svg-icon>
+        <router-link to="/validator">
+          validator
+          <svg-icon class="rightArrow" iconClass="rightArrow"></svg-icon>
         </router-link>
       </li>
       <li>
         <router-link to="/svg">
           svg <svg-icon class="rightArrow" iconClass="rightArrow"></svg-icon>
-        </router-link>
-      </li>
-      <li>
-        <router-link to="/validator">
-          validator
-          <svg-icon class="rightArrow" iconClass="rightArrow"></svg-icon>
         </router-link>
       </li>
     </ul>
@@ -66,7 +66,7 @@ export default class About extends Vue {}
 }
 h3 {
   font-size: 36px;
-  color: aquamarine;
+  color: #52ecab;
   padding: 20px 0;
 }
 ul {
